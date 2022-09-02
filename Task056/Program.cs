@@ -28,9 +28,10 @@ void MinSumRow(int[,] array)
     int minRow = 0;
     for (int row = 1; row < array.GetLength(0); row++)
     {
-        if(minSum > SumRow(array, row))
+        int sum = SumRow(array, row); //Чтобы дважды не считать сумму строки ввожу переменную sum.
+        if(minSum > sum)  //На больших матрицах это будет ускорит вычисления
         { 
-            minSum = SumRow(array, row);
+            minSum = sum; 
             minRow = row;
         }
     }
@@ -45,6 +46,6 @@ int[,] array = new int[,]
     {8, 4, 2, 4},
     {1, 2, 1, 3}
 };
+
 PrintMatrix(array);
-// Console.WriteLine(SumRow(array,0));
 MinSumRow(array);

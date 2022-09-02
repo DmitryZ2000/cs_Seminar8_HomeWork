@@ -21,14 +21,14 @@ void SortMatrix(int[,] matrix)
             int min_position = i;
             for (int j = i + 1; j < matrix.GetLength(1); j++)
             {
-                if (matrix[k,j] < matrix[k,min_position])
+                if (matrix[k, j] < matrix[k, min_position])
                 {
                     min_position = j;
                 }
             }
-            int temp = matrix[k,i];
-            matrix[k,i] = matrix[k,min_position];
-            matrix[k,min_position] = temp;
+            int temp = matrix[k, i];
+            matrix[k, i] = matrix[k, min_position];
+            matrix[k, min_position] = temp;
         }
     }
 }
