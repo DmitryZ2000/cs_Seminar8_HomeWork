@@ -25,7 +25,7 @@ void Spiral(int[,] matrix)
         {
             // Console.WriteLine($"m * (dirChanges %2) ={m * (dirChanges %2)}");
             visits = m * (dirChanges % 2) + n * ((dirChanges + 1) % 2) - (dirChanges / 2 - 1) - 2;
-            // Не понятная логика использования направления dirChanges в вычислении visits -требуется тайти еще разобрать
+            // Не понятная логика использования направления dirChanges в вычислении visits -требуется еще разобрать
             // Console.WriteLine($"visits2 ={visits}");
             int temp = dx;
             dx = -dy;
